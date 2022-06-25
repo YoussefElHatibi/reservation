@@ -1,0 +1,10 @@
+<div class="recapContainer">
+<h2 mat-dialog-title>Récpitulatif Réservation</h2>
+<mat-dialog-content class="mat-typography" style="height: 19vh;">
+  <h3>Félicitation! Votre réservation est En cours de traitement. Pour annuler ou suivre vos réservations, merci de cliquer sur "Mes réservations" !</h3>
+  <mat-dialog-actions align="end">
+    <button class="annulerAlerteBtn" mat-raised-button color="warn" mat-dialog-close [autofocus]="false">Annuler</button>
+    <a href="/main/suivreReservation" ><button mat-raised-button color="primary" [mat-dialog-close]="true">Mes réservations</button></a>
+  </mat-dialog-actions>
+</mat-dialog-content>
+</div>

@@ -1,0 +1,126 @@
+<form [formGroup]="reservationForm" class="form-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Nouvelle Réservation</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-md-4">
+          <mat-form-field class="full-width">
+            <input formControlName="nom" matInput placeholder="Nom" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="full-width">
+            <input formControlName="prenom" matInput placeholder="Prénom" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="full-width">
+            <input formControlName="cin" matInput placeholder="CIN" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <mat-form-field class="full-width">
+            <input formControlName="email" matInput placeholder="Email" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="full-width">
+            <input
+              mask="00-00000000"
+              formControlName="telephone"
+              matInput
+              placeholder="Téléphone"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="full-width">
+            <input formControlName="adresse" matInput placeholder="Adresse" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <mat-form-field class="full-width">
+            <!-- <input formControlName="terrain" matInput placeholder="Terrain" /> -->
+            <mat-label>Terrain</mat-label>
+            <mat-select (selectionChange)="refreshGrid()" formControlName="terrain" required [errorStateMatcher]="matcher">
+              <mat-option value="">...</mat-option>
+              <mat-option *ngFor="let elt of terrains" value="{{elt.id}}">{{elt.libelle}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="reservationForm.value.heure==undefined?false: reservationForm.value.heure.length==0">
+              Ce champ est obligatoire !
+           </mat-error>
+
+          </mat-form-field>
+        </div>
+        <div  class="col-md-4">
+          <mat-form-field  class="full-width">
+            <input
+            required
+              formControlName="date"
+              [matDatepicker]="picker"
+              matInput
+              placeholder="Date"
+              (dateChange)="refreshGrid()"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="reservationForm.value.date==undefined?true: (reservationForm.value.date.length==0)">
+              Ce champ est obligatoire !
+           </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="full-width">
+            <input
+              readonly
+              formControlName="heure"
+              type="time"
+              matInput
+              placeholder="Heure"
+              id="timepicker"
+            />
+            <!-- <input readonly formControlName="heure" [value]="time" type="time"  matInput placeholder="Heure" id='timepicker'> -->
+            <!-- <dl-date-time-picker id="dd" #time
+              startView="hour"
+              maxView="hour"
+              minView="hour"
+              (change)="onCustomDateChange($event)"
+              format="DD/MM/YYYY HH:mm"
+            >
+            </dl-date-time-picker> -->
+          </mat-form-field>
+        </div>
+      </div>
+      <br>
+      <div class="row grid-row">
+        <div class="col-md-6">
+          <app-day-grid
+            (hourChanged)="hourChangedHandler($event)"
+          ></app-day-grid>
+        </div>
+      </div>
+    </mat-card-content>
+    <div></div>
+    <mat-card-actions>
+      <button
+          style="width: 40%"
+        mat-raised-button
+        color="primary"
+        (click)="reserver()"
+      >
+        Réserver
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>

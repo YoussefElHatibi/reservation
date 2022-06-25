@@ -1,0 +1,7 @@
+.cdk-overlay-pane {
+  width: 57vw !important;
+}
+
+.custom-dialog-container .mat-dialog-container {
+  overflow-y: hidden;
+}

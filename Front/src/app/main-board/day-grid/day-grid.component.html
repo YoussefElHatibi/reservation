@@ -1,0 +1,3 @@
+<mat-grid-list cols="6" rowHeight="2:1" [gutterSize]="'5px'" >
+  <a *ngFor="let hour of dayHours" href="javascript:void(0);"><mat-grid-tile [ngClass]="hour.class" id="{{hour.heure.toString()}}" class="grid-elements" (click)="pickHour($event)">{{hour.heure.toString().substring(0,2)+'h'}}</mat-grid-tile></a>
+</mat-grid-list>

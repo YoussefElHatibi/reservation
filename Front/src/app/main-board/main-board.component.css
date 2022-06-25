@@ -1,0 +1,87 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~open-iconic/font/css/open-iconic-bootstrap.css';
+.mat-sidenav{
+  margin: 10px;
+  width: 200px;
+  border-right: none;
+  background: #212529;
+  color: white;
+  padding-right: 0px;
+  padding-left: 0px;
+  text-align: center;
+}
+
+.mat-sidenav-container{
+  height: calc(100vh - 65px);
+}
+
+.maincontainer{
+  height: calc(100vh - 98px);
+  margin: 16px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: lightgray;
+  border-radius: 10px;
+  background-color: white;
+  background-image: url('../../assets/soccer-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.menu-button{
+  width: 100%;
+  background: none;
+  color: rgb(204, 204, 204);
+  font-size: 15px;
+  padding: 0 0px;
+  display: inline-block;
+}
+
+
+
+.active{
+   background-color: rgb(109, 109, 109);
+  color: white;
+  /* border-top: 1px solid;
+  border-bottom: 1px solid; */
+  border-radius: 0%;
+}
+
+.mat-drawer-container{
+  background-color: white;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+
+  border-left: 60px solid green;
+}
+
+
+
+
+.menu-button-btn{
+  width: 100%;
+}
+
+.menuIcon{
+  float: left;
+    margin-left: 3%;
+    margin-top: 5px;
+}
+
+.menuSpan{
+  float: left;
+  margin-left: 7%;
+  font-size: 13px;
+}
+
+.cdk-overlay-pane{
+  width: 100% !important;
+}
+

@@ -1,0 +1,60 @@
+<div class="mat-elevation-z8">
+  <table class="reservation-admin" mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)" matSortDirection="desc">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="nom" sticky>
+      <th mat-header-cell *matHeaderCellDef center> Nom </th>
+      <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="prenom" sticky>
+      <th mat-header-cell *matHeaderCellDef> Prénom </th>
+      <td mat-cell *matCellDef="let element"> {{element.prenom}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> E-Mail </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="cin">
+      <th mat-header-cell *matHeaderCellDef> CIN </th>
+      <td mat-cell *matCellDef="let element"> {{element.cin}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="date" sticky >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear> Date Reservation </th>
+      <td mat-cell *matCellDef="let element"> {{element.date + " " + element.heure}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="statut" sticky>
+      <th mat-header-cell *matHeaderCellDef> Statut </th>
+      <td mat-cell *matCellDef="let element" > <span [ngClass]="formatterStatuts(element.statut)"> {{element.statut}} </span></td>
+    </ng-container>
+
+    <ng-container matColumnDef="id" sticky>
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let element" class="actions-td">
+        <button (click)="validerReservation(element.id)" mat-mini-fab color="sucess">
+          <mat-icon>check_circle</mat-icon>
+        </button>
+        <button class="cancel-btn" (click)="annulerReservation(element.id)" mat-mini-fab color="warn">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 [length]="resultsLength"
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>

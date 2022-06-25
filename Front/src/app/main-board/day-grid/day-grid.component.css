@@ -1,0 +1,20 @@
+.disabled-grid{
+  background-color: rgb(235, 11, 11);
+  border: white 1px solid !important;
+  border-radius: 4px;
+   pointer-events: none;
+}
+
+.enabled-grid{
+  background-color: rgb(169, 163, 163);
+  border: white 1px solid !important;
+  border-radius: 4px;
+  pointer-events: all;
+}
+
+.selected-grid{
+  background-color: rgb(6, 117, 28);
+  border: white 1px solid !important;
+  border-radius: 4px;
+  pointer-events: all;
+}

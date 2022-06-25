@@ -1,0 +1,14 @@
+.mat-dialog-content{
+  display: contents !important;
+}
+
+.custom-modalbox
+  .mat-dialog-container {
+      padding: 0;
+  }
+
+
+
+.mat-dialog-content{
+  height: 27vh !important;
+}

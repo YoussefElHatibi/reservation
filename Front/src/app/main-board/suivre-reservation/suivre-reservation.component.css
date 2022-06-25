@@ -1,0 +1,86 @@
+table {
+  width: 100%;
+}
+
+
+.mat-row {
+  height: auto;
+}
+
+.mat-cell {
+  padding: 8px 8px 8px 0;
+}
+
+.example-container {
+  height: 400px;
+  width: 550px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+table {
+  width: 800px;
+}
+
+td.mat-column-star {
+  width: 20px;
+  padding-right: 8px;
+}
+
+th.mat-column-position, td.mat-column-position {
+  padding-left: 8px;
+}
+
+.mat-table-sticky-border-elem-right {
+  border-left: 1px solid #e0e0e0;
+}
+
+.mat-table-sticky-border-elem-left {
+  border-right: 1px solid #e0e0e0;
+}
+
+.enAttente{
+  background-color: orange;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+    width: 166px;
+    text-align: center;
+}
+
+.refusee{
+  background-color: red;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+    width: 166px;
+    text-align: center;
+}
+
+.validee{
+  background-color: green;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+    width: 166px;
+    text-align: center;
+}
+
+.fermee{
+  background-color: darkslategray;
+    padding: 5px 10px 5px 10px;
+    width: 166px;
+    text-align: center;
+}
+
+
+.suivre-reservation-table{
+  width: 1000px !important;
+}
+
+.statut-td{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.email-td{
+  padding-left: 10px !important;
+}

@@ -1,0 +1,64 @@
+<div class="container" *ngIf="currentUser; else loggedOut">
+  <div class="main-content">
+
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">
+                Profil de {{ currentUser.username }} (<span
+                  style="color: rgb(126, 102, 102); font-size: large"
+                  >{{ this.role }}</span
+                >)
+              </h4>
+
+            </div>
+            <div class="profile-body">
+              <p class="card-category" >Modifier votre mot de passe</p>
+              <form [formGroup]="changePwdForm">
+                  <div class="col-md-12">
+                    <mat-form-field class="">
+                      <input
+                      formControlName="oldPwd"
+                        matInput
+                        placeholder="Entrer votre mot de passe actuel"
+                        type="password"
+                      />
+                    </mat-form-field>
+                  </div>
+                  <div class="col-md-12">
+                    <mat-form-field class="example-full-width">
+                      <input formControlName="newPwd" matInput placeholder="Saisir le nouveau mot de passe" type="password" />
+                    </mat-form-field>
+                  </div>
+
+
+                  <div class="col-md-12">
+                    <mat-form-field class="example-full-width">
+                      <input
+                      formControlName="newPwdSecond"
+                        matInput
+                        placeholder="Resaisir le nouveau mot de passe"
+                        type="password"
+                      />
+                    </mat-form-field>
+                  </div>
+
+
+                  <div class="submit-btn">
+                <button
+                    (click)="modifierPassword()"
+                  mat-raised-button
+                  color="primary"
+                  type="submit"
+                >
+                  Modifier
+                </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+<ng-template #loggedOut> Please login. </ng-template>

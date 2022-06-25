@@ -1,0 +1,23 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened class="mat-elevation-z4">
+    <a *ngIf="userRole=='ROLE_USER'" mat-button class="menu-button" href="/main/nouvelleReservation" [ngClass]="{active: isActive('main','nouvelleReservation')}">
+      <mat-icon class="menuIcon">assignment</mat-icon>
+      <span class="menuSpan">Nouvelle Réservation</span>
+    </a>
+    <a  *ngIf="userRole=='ROLE_USER'" mat-button class="menu-button" href="/main/suivreReservation" [ngClass]="{active: isActive('main','suivreReservation')}">
+      <mat-icon class="menuIcon">assignment_turned_in</mat-icon>
+      <span class="menuSpan">Suivre mes Réservations</span>
+    </a>
+    <a  *ngIf="userRole=='ROLE_ADMIN'" mat-button class="menu-button" href="/main/administrerReservation" [ngClass]="{active: isActive('main','administrerReservation')}">
+      <mat-icon class="menuIcon">assignment_turned_in</mat-icon>
+      <span class="menuSpanAdmin menuSpan">Administration Réservations</span>
+    </a>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="maincontainer mat-elevation-z4">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

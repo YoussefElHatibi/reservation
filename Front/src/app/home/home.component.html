@@ -1,0 +1,14 @@
+<div class="container">
+  <header>
+    <!-- <p>{{ content }}</p> -->
+    <div class="homecontainer" >
+      <h1 class="homeimg">Bonjour sur notre plateforme de réservation des terrains de Football!</h1>
+      <button class="home-new-reservation-btn"  mat-raised-button
+      color="primary" *ngIf="isLoggedIn" (click)="nouvelleReservation()">Nouvelle Reservation</button>
+      <google-map  class="map-container"
+
+      ></google-map>
+
+    </div>
+  </header>
+</div>

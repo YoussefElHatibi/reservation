@@ -1,0 +1,135 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-calendars/styles/material.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+mat-toolbar {
+  background: #004a9f;
+  color: white;
+}
+
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background: #002b5c;
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.content {
+  height: calc(100vh - 98px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  color: lightgray;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+.mat-figure{
+  color: white !important;
+}
+
+.grid-row{
+  justify-content: center;
+}
+
+.mat-dialog-container{
+  background: #275b2f !important;
+}
+
+.mat-dialog-actions{
+  justify-content: space-between !important;
+}
+
+.cdk-overlay-pane{
+  max-width: 33vw !important;
+}
+
+
+.homecontainer{
+  height: 100%;
+}
+.homeimg{
+  margin-top:10%;
+  height: calc(28vh - 98px);
+  color: white;
+
+}
+
+.recapContainer{
+  width: 100% important;
+}
+
+
+.custom-dialog-container .mat-dialog-container {
+  overflow-y: hidden;
+}
+
+.mat-success {
+  background-color: green;
+  color: #fff;
+}
+
+
+.cdk-overlay-pane {
+  max-width: 63vw !important;
+}
+
+.red-snackbar{
+  background-color: rgb(214, 67, 67) !important;
+  color: white !important;
+}
+
+.green-snackbar{
+  background-color: rgb(29, 124, 46) !important;
+  color: white !important;
+}
+
+.annulerAlerteBtn:focus {
+  outline: none !important;
+}
+
+.app{
+  background-image:url('assets/soccer-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.ng-tns-c3-0 .ng-star-inserted{
+  color: white !important;
+  }
+
+  .mat-form-field-label .ng-tns-c3-1 .ng-star-inserted .mat-empty .mat-form-field-empty{
+    color:white !important;
+  }
+
+  .ng-tns-c3-1 .ng-star-inserted{
+    color: white !important;
+  }
+
+.ali{
+  height: 100vh;
+}
+
+.menuSpanAdmin{
+  margin-left: 0% !important;
+}

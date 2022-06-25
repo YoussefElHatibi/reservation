@@ -1,0 +1,58 @@
+.profile-body{
+ background-color: rgb(42, 38, 40);
+ border-radius: 0px 0px 15px 15px;
+}
+
+
+.card{
+  border-radius: 15px ! important;
+  border: 0cm;
+}
+
+.card-header{
+  border-radius: 15px 15px 0px 0px ;
+  text-align: center;
+
+}
+
+.submit-btn{
+  text-align: center;
+  padding-bottom: 25px;
+  color: #e3165b;
+}
+
+.container{
+  margin-top: 150px;
+  max-width: 50%;
+  padding-bottom: 145px;}
+
+.card-category{
+  color: #e3165b !important;
+    text-align: center;
+    margin-top: 19px;
+    font-style: oblique;
+}
+
+.mat-form-field {
+  display: contents;
+  position: relative;
+  text-align: center;
+}
+
+input:focus{
+  color:white;
+  }
+
+  ::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: green !important;
+   }
+
+   ::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: green !important;
+   }
+
+   .card-title{
+    margin-top: 10px;
+   }

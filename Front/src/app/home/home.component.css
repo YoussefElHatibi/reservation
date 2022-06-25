@@ -1,0 +1,12 @@
+
+.map-container{
+  display: flex;
+    justify-content: center;
+}
+.home-new-reservation-btn{
+  margin-left: 38%;
+  margin-bottom: 60px;
+  font-size: x-large;
+    width: 25%;
+    height: 50px;
+}
